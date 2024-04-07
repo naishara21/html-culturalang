@@ -4,52 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact</title>
     <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #67C462;
-            min-width: 160px;
-            z-index: 1;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .contact-info {
+            max-width: 40%;
+            margin-right: 20px;
         }
 
-        .header h1 {
-            color: #3f3d3d;
-            font-size: 46px;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        .contact-info h2 {
+            color: #000;
+            font-size: 24px;
         }
 
-        .dropdown-content a {
-            color: #fff;
-            padding: 12px 16px;
+        .contact-info p {
+            color: #000;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            width: 60%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+
+        a {
             text-decoration: none;
-            display: block;
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
-
-        .image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -40%);
-            width: 350px;
-            height: 150px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-
-        nav {
+nav {
             display: flex;
             justify-content: center; /* Center the navigation links */
             align-items: center;
@@ -75,99 +81,6 @@
             text-align: left;
         }
 
-        #search-button {
-            background-color: #3da037;
-            border: none;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        #search-button:hover {
-            background-color: rgb(10, 66, 7);
-        }
-
-        img {
-            width: 100%;
-            display: block;
-        }
-
-        .overlay {
-            position: absolute;
-            background-color: rgb(182, 230, 178);
-            padding: 20px 25px;
-            border-radius: 5px;
-            color: rgb(18, 87, 14);
-        }
-
-        .header {
-            bottom: 250px;
-            left: 475px;
-            color: rgb(18, 87, 14);
-        }
-
-        body {
-            background-image: url('o.png');
-        }
-
-        .right-align {
-            float: right;
-            margin-left: 10px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .about {
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .column {
-            background-color: #67C462;
-            border: 1px solid #67C462;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px rgb(33, 58, 33);
-            color: #F6F4EB;
-            font-size: 17px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .parallax-container {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .parallax-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200%;
-            background-image: url('bg.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: -1;
-            animation: parallaxScroll 10s infinite linear;
-        }
 
     </style>
 </head>
@@ -197,48 +110,19 @@
         </ul>
     </nav>
 
-    <form style="width: 26rem;">
-        <!-- Name input -->
-        <div data-mdb-input-init class="form-outline mb-4">
-          <input type="text" id="form4Example1" class="form-control" />
-          <label class="form-label" for="form4Example1">Name</label>
-        </div>
-      
-        <!-- Email input -->
-        <div data-mdb-input-init class="form-outline mb-4">
-          <input type="email" id="form4Example2" class="form-control" />
-          <label class="form-label" for="form4Example2">Email address</label>
-        </div>
-      
-        <!-- Message input -->
-        <div data-mdb-input-init class="form-outline mb-4">
-          <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-          <label class="form-label" for="form4Example3">Message</label>
-        </div>
-      
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-          <input
-            class="form-check-input me-2"
-            type="checkbox"
-            value=""
-            id="form4Example4"
-            checked
-          />
-          <label class="form-check-label" for="form4Example4">
-            Send me a copy of this message
-          </label>
-        </div>
-      
-        <!-- Submit button -->
-        <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Send</button>
-      </form>
 
-    <script>
-import { Input, Ripple, initMDB } from "mdb-ui-kit";
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Form</h2>
+            <p>Please fill out this form to contact us! Additionally, you can contact us at contact@gmail.com. Feel free to message the Admin with the username <strong>Admin</strong> for any queries. Usual response time is 2-5 days.</p>
+<img class="image" src="logo.png" alt="logo">
+        </div>
+        <div class="contact-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoVn-Hsri7oiY5dcEV-lpdHq9czvPHg6eGHlOSXsk03OcKgw/viewform?embedded=true"></iframe>
+        </div>
+    </div>
+<hr>
 
-initMDB({ Input, Ripple });
-    </script>
 </body>
 
 </html>
